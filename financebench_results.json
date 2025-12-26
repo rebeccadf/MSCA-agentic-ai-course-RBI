@@ -1,0 +1,902 @@
+[
+  {
+    "financebench_id": "financebench_id_04672",
+    "company": "3M",
+    "question": "Assume that you are a public equities analyst. Answer the following question by primarily using information that is shown in the balance sheet: what is the year end FY2018 net PPNE for 3M? Answer in USD billions.",
+    "answer": "The question cannot be answered from the provided data due to insufficient information."
+  },
+  {
+    "financebench_id": "financebench_id_01865",
+    "company": "3M",
+    "question": "If we exclude the impact of M&A, which segment has dragged down 3M's overall growth in 2022?",
+    "answer": "The question cannot be answered because there is insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_03029",
+    "company": "3M",
+    "question": "What is the FY2018 capital expenditure amount (in USD millions) for 3M? Give a response to the question by relying on the details shown in the cash flow statement.",
+    "answer": "The FY2018 capital expenditure for 3M was 1,577 USD millions."
+  },
+  {
+    "financebench_id": "financebench_id_01226",
+    "company": "3M",
+    "question": "What drove operating margin change as of FY2022 for 3M? If operating margin is not a useful metric for a company like this, then please state that and explain why.",
+    "answer": "This question cannot be answered from the provided data. FY2022 figures and the drivers of any operating margin change are not available in the supplied facts."
+  },
+  {
+    "financebench_id": "financebench_id_00807",
+    "company": "3M",
+    "question": "Does 3M have a reasonably healthy liquidity profile based on its quick ratio for Q2 of FY2023? If the quick ratio is not relevant to measure liquidity, please state that and explain why.",
+    "answer": "Cannot answer. The computed metrics indicate insufficient data to determine 3M's quick ratio for Q2 FY2023 or evaluate its liquidity."
+  },
+  {
+    "financebench_id": "financebench_id_00499",
+    "company": "3M",
+    "question": "Is 3M a capital-intensive business based on FY2022 data?",
+    "answer": "Yes. The FY2022 capital spending to PPE net ratio is approximately 5.3, indicating a capital-intensive business."
+  },
+  {
+    "financebench_id": "financebench_id_02987",
+    "company": "Activision Blizzard",
+    "question": "What is the FY2019 fixed asset turnover ratio for Activision Blizzard? Fixed asset turnover ratio is defined as: FY2019 revenue / (average PP&E between FY2018 and FY2019). Round your answer to two decimal places. Base your judgments on the information provided primarily in the statement of income and the statement of financial position.",
+    "answer": "The question cannot be answered due to insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_00941",
+    "company": "3M",
+    "question": "Which debt securities are registered to trade on a national securities exchange under 3M's name as of Q2 of 2023?",
+    "answer": "None of the provided facts indicate debt securities registered to trade on a national securities exchange under 3M's name as of Q2 2023."
+  },
+  {
+    "financebench_id": "financebench_id_07507",
+    "company": "Adobe",
+    "question": "What is Adobe's year-over-year change in unadjusted operating income from FY2015 to FY2016 (in units of percents and round to one decimal place)? Give a solution to the question by using the income statement.",
+    "answer": "The question cannot be answered because the provided data is insufficient."
+  },
+  {
+    "financebench_id": "financebench_id_04735",
+    "company": "Adobe",
+    "question": "You are an investment banker and your only resource(s) to answer the following question is (are): the statement of financial position and the cash flow statement. Here's the question: what is the FY2015 operating cash flow ratio for Adobe? Operating cash flow ratio is defined as: cash from operations / total current liabilities. Round your answer to two decimal places.",
+    "answer": "Cannot be determined from the provided statements because total current liabilities are not given."
+  },
+  {
+    "financebench_id": "financebench_id_07966",
+    "company": "Activision Blizzard",
+    "question": "What is the FY2017 - FY2019 3 year average of capex as a % of revenue for Activision Blizzard? Answer in units of percents and round to one decimal place. Calculate (or extract) the answer from the statement of income and the cash flow statement.",
+    "answer": "The FY2017\u2013FY2019 3-year average capex as a percentage of revenue is 2.0%."
+  },
+  {
+    "financebench_id": "financebench_id_03856",
+    "company": "Adobe",
+    "question": "What is the FY2017 operating cash flow ratio for Adobe? Operating cash flow ratio is defined as: cash from operations / total current liabilities. Round your answer to two decimal places. Please utilize information provided primarily within the balance sheet and the cash flow statement.",
+    "answer": "The FY2017 operating cash flow ratio is 0.83."
+  },
+  {
+    "financebench_id": "financebench_id_01858",
+    "company": "3M",
+    "question": "Does 3M maintain a stable trend of dividend distribution?",
+    "answer": "Yes. 3M has a stable dividend-distribution pattern, with 65 consecutive years of dividend increases."
+  },
+  {
+    "financebench_id": "financebench_id_01319",
+    "company": "AES Corporation",
+    "question": "What is the quantity of restructuring costs directly outlined in AES Corporation's income statements for FY2022? If restructuring costs are not explicitly outlined then state 0.",
+    "answer": "Restructuring costs for FY2022 are 0 million."
+  },
+  {
+    "financebench_id": "financebench_id_00540",
+    "company": "AES Corporation",
+    "question": "Roughly how many times has AES Corporation sold its inventory in FY2022? Calculate inventory turnover ratio for the FY2022; if conventional inventory management is not meaningful for the company then state that and explain why.",
+    "answer": "Cannot answer the question: there is insufficient data to compute AES Corporation's FY2022 inventory turnover or the number of times it sold its inventory. The computed metrics explicitly indicate insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_00438",
+    "company": "Adobe",
+    "question": "Does Adobe have an improving operating margin profile as of FY2022? If operating margin is not a useful metric for a company like this, then state that and explain why.",
+    "answer": "The question cannot be answered due to insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_10420",
+    "company": "AES Corporation",
+    "question": "Based on the information provided primarily in the statement of financial position and the statement of income, what is AES's FY2022 return on assets (ROA)? ROA is defined as: FY2022 net income / (average total assets between FY2021 and FY2022). Round your answer to two decimal places.",
+    "answer": "The question cannot be answered because there is insufficient data to compute FY2022 ROA."
+  },
+  {
+    "financebench_id": "financebench_id_06655",
+    "company": "Amazon",
+    "question": "What is Amazon's FY2017 days payable outstanding (DPO)? DPO is defined as: 365 * (average accounts payable between FY2016 and FY2017) / (FY2017 COGS + change in inventory between FY2016 and FY2017). Round your answer to two decimal places. Address the question by using the line items and information shown within the balance sheet and the P&L statement.",
+    "answer": "The question cannot be answered because the provided data do not include FY2016 and FY2017 COGS, accounts payable, and inventory changes needed to calculate DPO."
+  },
+  {
+    "financebench_id": "financebench_id_00591",
+    "company": "Adobe",
+    "question": "Does Adobe have an improving Free cashflow conversion as of FY2022?",
+    "answer": "Yes. Adobe's free cash flow conversion improved in FY2022, with the ratio rising to 0.9273 from 0.5108 in 2021."
+  },
+  {
+    "financebench_id": "financebench_id_08286",
+    "company": "Amazon",
+    "question": "By drawing conclusions from the information stated only in the income statement, what is Amazon's FY2019 net income attributable to shareholders (in USD millions)?",
+    "answer": "The FY2019 net income attributable to shareholders is 21331 USD millions."
+  },
+  {
+    "financebench_id": "financebench_id_03882",
+    "company": "Amcor",
+    "question": "What is Amcor's year end FY2020 net AR (in USD millions)? Address the question by adopting the perspective of a financial analyst who can only use the details shown within the balance sheet.",
+    "answer": "Amcor's year-end FY2020 net accounts receivable (AR) is 1615.9 USD millions."
+  },
+  {
+    "financebench_id": "financebench_id_00799",
+    "company": "Amcor",
+    "question": "Has AMCOR's quick ratio improved or declined between FY2023 and FY2022? If the quick ratio is not something that a financial analyst would ask about a company like this, then state that and explain why.",
+    "answer": "Cannot answer: there is insufficient data to determine AMCOR's quick ratio for FY2023 and FY2022."
+  },
+  {
+    "financebench_id": "financebench_id_08135",
+    "company": "Amazon",
+    "question": "What is Amazon's year-over-year change in revenue from FY2016 to FY2017 (in units of percents and round to one decimal place)? Calculate what was asked by utilizing the line items clearly shown in the statement of income.",
+    "answer": "The year-over-year revenue change from FY2016 to FY2017 is 30.8 percent."
+  },
+  {
+    "financebench_id": "financebench_id_01935",
+    "company": "Amcor",
+    "question": "What was the key agenda of the AMCOR's 8k filing dated 1st July 2022?",
+    "answer": "The provided information does not include the key agenda of AMCOR's 8-K filing dated July 1, 2022, so the question cannot be answered."
+  },
+  {
+    "financebench_id": "financebench_id_01079",
+    "company": "Amcor",
+    "question": "What are major acquisitions that AMCOR has done in FY2023, FY2022 and FY2021?",
+    "answer": "The question cannot be answered due to insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_01148",
+    "company": "Amcor",
+    "question": "What industry does AMCOR primarily operate in?",
+    "answer": "The question cannot be answered from the provided data due to insufficient information."
+  },
+  {
+    "financebench_id": "financebench_id_01928",
+    "company": "Amcor",
+    "question": "What Was AMCOR's Adjusted Non GAAP EBITDA for FY 2023",
+    "answer": "Cannot be answered from the provided data."
+  },
+  {
+    "financebench_id": "financebench_id_00684",
+    "company": "Amcor",
+    "question": "Does AMCOR have an improving gross margin profile as of FY2023? If gross margin is not a useful metric for a company like this, then state that and explain why.",
+    "answer": "No. AMCOR's gross margin declined from 19.4% in 2022 to 18.5% in 2023, so it did not improve."
+  },
+  {
+    "financebench_id": "financebench_id_01930",
+    "company": "Amcor",
+    "question": "How much was the Real change in Sales for AMCOR in FY 2023 vs FY 2022, if we exclude the impact of FX movement, passthrough costs and one-off items?",
+    "answer": "The question cannot be answered due to insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_03069",
+    "company": "AMD",
+    "question": "Answer the following question as if you are an equity research analyst and have lost internet connection so you do not have access to financial metric providers. According to the details clearly outlined within the P&L statement and the statement of cash flows, what is the FY2015 depreciation and amortization (D&A from cash flow statement) % margin for AMD?",
+    "answer": "The FY2015 D&A margin is 4.184414%."
+  },
+  {
+    "financebench_id": "financebench_id_01936",
+    "company": "Amcor",
+    "question": "What is the nature & purpose of AMCOR's restructuring liability as oF Q2 of FY2023 close?",
+    "answer": "The liability is a restructuring and related expenses provision tied to the Russia-Ukraine conflict, totaling $107 million as of the Q2 FY2023 close."
+  },
+  {
+    "financebench_id": "financebench_id_00222",
+    "company": "AMD",
+    "question": "Does AMD have a reasonably healthy liquidity profile based on its quick ratio for FY22? If the quick ratio is not relevant to measure liquidity, please state that and explain why.",
+    "answer": "The question cannot be answered. The provided data do not include the necessary current assets and current liabilities to compute AMD's quick ratio for FY22 (insufficient data)."
+  },
+  {
+    "financebench_id": "financebench_id_01198",
+    "company": "AMD",
+    "question": "What drove revenue change as of the FY22 for AMD?",
+    "answer": "The FY22 revenue change was driven by increases in Embedded net revenue (+4,306 million), Data Center net revenue (+2,349 million), and Gaming net revenue (+1,198 million), partially offset by declines in All Other net revenue (-4,570 million) and Client net revenue (-686 million), for a total net revenue change of +7,167 million."
+  },
+  {
+    "financebench_id": "financebench_id_00917",
+    "company": "AMD",
+    "question": "What drove operating margin change as of the FY22 for AMD? If operating margin is not a useful metric for a company like this, then please state that and explain why.",
+    "answer": "Cannot be answered due to insufficient data. The provided facts do not include FY22 operating margin or its drivers."
+  },
+  {
+    "financebench_id": "financebench_id_01279",
+    "company": "AMD",
+    "question": "Among operations, investing, and financing activities, which brought in the most (or lost the least) cash flow for AMD in FY22?",
+    "answer": "Operating activities brought in the most cash flow in FY22, at 3,565 million. Investing activities provided 1,999 million, while financing activities used 3,264 million (negative)."
+  },
+  {
+    "financebench_id": "financebench_id_00563",
+    "company": "AMD",
+    "question": "From FY21 to FY22, excluding Embedded, in which AMD reporting segment did sales proportionally increase the most?",
+    "answer": "The Data Center segment."
+  },
+  {
+    "financebench_id": "financebench_id_00995",
+    "company": "AMD",
+    "question": "What are the major products and services that AMD sells as of FY22?",
+    "answer": "As of FY22, AMD's major product and service categories were Ryzen processors, AMD EPYC data center processors, Radeon graphics, AMD Instinct accelerators, ROCm software, and AMD-based cloud computing offerings."
+  },
+  {
+    "financebench_id": "financebench_id_00757",
+    "company": "AMD",
+    "question": "Did AMD report customer concentration in FY22?",
+    "answer": "The question cannot be answered due to insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_00476",
+    "company": "American Express",
+    "question": "Which debt securities are registered to trade on a national securities exchange under American Express' name as of 2022?",
+    "answer": "The provided information does not specify which American Express debt securities are registered to trade on a national securities exchange under American Express' name as of 2022; therefore the question cannot be answered."
+  },
+  {
+    "financebench_id": "financebench_id_00723",
+    "company": "American Express",
+    "question": "Does AMEX have an improving operating margin profile as of 2022? If operating margin is not a useful metric for a company like this, then state that and explain why.",
+    "answer": "Cannot determine from the provided data. Operating margin figures are not reported, so we cannot assess whether AMEX had an improving margin profile in 2022."
+  },
+  {
+    "financebench_id": "financebench_id_01351",
+    "company": "American Express",
+    "question": "How much has the effective tax rate of American Express changed between FY2021 and FY2022?",
+    "answer": "It decreased by 3.0 percentage points, from 24.6% in 2021 to 21.6% in 2022."
+  },
+  {
+    "financebench_id": "financebench_id_01964",
+    "company": "American Express",
+    "question": "What was the largest liability in American Express's Balance Sheet in 2022?",
+    "answer": "Cannot answer: the computed metrics indicate insufficient data, so the largest liability on American Express's Balance Sheet in 2022 cannot be determined from the provided facts."
+  },
+  {
+    "financebench_id": "financebench_id_01028",
+    "company": "American Express",
+    "question": "What are the geographies that American Express primarily operates in as of 2022?",
+    "answer": "The geographies are United States, EMEA, APAC, and LACC."
+  },
+  {
+    "financebench_id": "financebench_id_05718",
+    "company": "American Water Works",
+    "question": "How much (in USD billions) did American Water Works pay out in cash dividends for FY2020? Compute or extract the answer by primarily using the details outlined in the statement of cash flows.",
+    "answer": "American Water Works paid 0.389 USD billions in cash dividends for FY2020."
+  },
+  {
+    "financebench_id": "financebench_id_04254",
+    "company": "American Water Works",
+    "question": "Basing your judgments off of the cash flow statement and the income statement, what is American Water Works's FY2021 unadjusted operating income + depreciation and amortization from the cash flow statement (unadjusted EBITDA) in USD millions?",
+    "answer": "FY2021 unadjusted EBITDA is 1832 million USD."
+  },
+  {
+    "financebench_id": "financebench_id_00720",
+    "company": "American Express",
+    "question": "What drove gross margin change as of the FY2022 for American Express? If gross margin is not a useful metric for a company like this, then please state that and explain why.",
+    "answer": "The question cannot be answered due to insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_00070",
+    "company": "American Water Works",
+    "question": "Does American Water Works have positive working capital based on FY2022 data? If working capital is not a useful or relevant metric for this company, then please state that and explain why.",
+    "answer": "Cannot determine from the provided data because current assets are not provided. The only available figure is Total current liabilities for 2022 (2811 million), and the computed metrics indicate insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_02608",
+    "company": "Best Buy",
+    "question": "In agreement with the information outlined in the income statement, what is the FY2015 - FY2017 3 year average net profit margin (as a %) for Best Buy? Answer in units of percents and round to one decimal place.",
+    "answer": "The question cannot be answered because there is insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_01981",
+    "company": "American Express",
+    "question": "Was American Express able to retain card members during 2022?",
+    "answer": "The question cannot be answered from the provided data. There is no retention or churn metric for card members in 2022, and the computed metrics indicate insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_01077",
+    "company": "Best Buy",
+    "question": "What are major acquisitions that Best Buy has done in FY2023, FY2022 and FY2021?",
+    "answer": "ERROR: Error code: 429 - {'error': {'code': 'RateLimitReached', 'message': 'Your requests to gpt-5-nano for gpt-5-nano in Sweden Central have exceeded the token rate limit for your current AIServices S0 pricing tier. This request was for ChatCompletions_Create under Azure OpenAI API version 2024-12-01-preview. Please retry after 4 seconds. To increase your default rate limit, visit: https://aka.ms/oai/quotaincrease.'}}"
+  },
+  {
+    "financebench_id": "financebench_id_04417",
+    "company": "Best Buy",
+    "question": "What is the year end FY2019 total amount of inventories for Best Buy? Answer in USD millions. Base your judgments on the information provided primarily in the balance sheet.",
+    "answer": "USD 5,409 million."
+  },
+  {
+    "financebench_id": "financebench_id_01275",
+    "company": "Best Buy",
+    "question": "Among operations, investing, and financing activities, which brought in the most (or lost the least) cash flow for Best Buy in FY2023?",
+    "answer": "ERROR: Error code: 429 - {'error': {'code': 'RateLimitReached', 'message': 'Your requests to gpt-5-nano for gpt-5-nano in Sweden Central have exceeded the token rate limit for your current AIServices S0 pricing tier. This request was for ChatCompletions_Create under Azure OpenAI API version 2024-12-01-preview. Please retry after 2 seconds. To increase your default rate limit, visit: https://aka.ms/oai/quotaincrease.'}}"
+  },
+  {
+    "financebench_id": "financebench_id_01902",
+    "company": "Best Buy",
+    "question": "Which Best Buy product category performed the best (by top line) in the domestic (USA) Market during Q2 of FY2024?",
+    "answer": "The question cannot be answered due to insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_00288",
+    "company": "Best Buy",
+    "question": "Was there any drop in Cash & Cash equivalents between FY 2023 and Q2 of FY2024?",
+    "answer": "Cannot answer. The computed metrics indicate insufficient data, and the available facts only include Cash and cash equivalents for 2023, with no FY2024 Q2 data to compare."
+  },
+  {
+    "financebench_id": "financebench_id_03838",
+    "company": "Block",
+    "question": "What is the FY2019 - FY2020 total revenue growth rate for Block (formerly known as Square)? Answer in units of percents and round to one decimal place. Approach the question asked by assuming the standpoint of an investment banking analyst who only has access to the statement of income.",
+    "answer": "The FY2019-2020 total revenue growth rate is 101.0%."
+  },
+  {
+    "financebench_id": "financebench_id_00685",
+    "company": "Best Buy",
+    "question": "Are Best Buy's gross margins historically consistent (not fluctuating more than roughly 2% each year)? If gross margins are not a relevant metric for a company like this, then please state that and explain why.",
+    "answer": "Yes. Computed metrics show a maximum year-over-year gross margin change of 0.6 percentage points, indicating consistency within 2 percentage points."
+  },
+  {
+    "financebench_id": "financebench_id_00460",
+    "company": "Best Buy",
+    "question": "Was there any change in the number of Best Buy stores between Q2 of FY2024 and FY2023?",
+    "answer": "Yes. Domestic Best Buy total stores at the end of Q2 FY24 decreased by 23 compared with Q2 FY23."
+  },
+  {
+    "financebench_id": "financebench_id_04660",
+    "company": "Block",
+    "question": "Considering the data in the balance sheet, what is Block's (formerly known as Square) FY2016 working capital ratio? Define working capital ratio as total current assets divided by total current liabilities. Round your answer to two decimal places.",
+    "answer": "The FY2016 working capital ratio is 3.00."
+  },
+  {
+    "financebench_id": "financebench_id_07661",
+    "company": "Block",
+    "question": "Using the cash flow statement, answer the following question to the best of your abilities: how much did Block (formerly known as Square) generate in cash flow from operating activities in FY2020? Answer in USD millions.",
+    "answer": "Block generated USD 173.11 million in cash flow from operating activities in FY2020."
+  },
+  {
+    "financebench_id": "financebench_id_10285",
+    "company": "Boeing",
+    "question": "We need to calculate a financial metric by using information only provided within the balance sheet. Please answer the following question: what is Boeing's year end FY2018 net property, plant, and equipment (in USD millions)?",
+    "answer": "12,645 (USD millions)."
+  },
+  {
+    "financebench_id": "financebench_id_01091",
+    "company": "Boeing",
+    "question": "Has Boeing reported any materially important ongoing legal battles from FY2022?",
+    "answer": "ERROR: Error code: 429 - {'error': {'code': 'RateLimitReached', 'message': 'Your requests to gpt-5-nano for gpt-5-nano in Sweden Central have exceeded the token rate limit for your current AIServices S0 pricing tier. This request was for ChatCompletions_Create under Azure OpenAI API version 2024-12-01-preview. Please retry after 2 seconds. To increase your default rate limit, visit: https://aka.ms/oai/quotaincrease.'}}"
+  },
+  {
+    "financebench_id": "financebench_id_00517",
+    "company": "Boeing",
+    "question": "Are there any product categories / service categories that represent more than 20% of Boeing's revenue for FY2022?",
+    "answer": "Yes. Sales of products account for 83.9% of Boeing's total revenue in FY2022, which is well above 20%."
+  },
+  {
+    "financebench_id": "financebench_id_00678",
+    "company": "Boeing",
+    "question": "Does Boeing have an improving gross margin profile as of FY2022? If gross margin is not a useful metric for a company like this, then state that and explain why.",
+    "answer": "Cannot answer. The provided data do not include gross margin figures, and the computed metrics endpoint indicates insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_00494",
+    "company": "Boeing",
+    "question": "What production rate changes is Boeing forecasting for FY2023?",
+    "answer": "The forecasted production rate for FY2023 is 5 per month."
+  },
+  {
+    "financebench_id": "financebench_id_00464",
+    "company": "Boeing",
+    "question": "Is Boeing's business subject to cyclicality?",
+    "answer": "Yes. The computed metric indicates Boeing's business is subject to cyclicality."
+  },
+  {
+    "financebench_id": "financebench_id_00585",
+    "company": "Boeing",
+    "question": "How does Boeing's effective tax rate in FY2022 compare to FY2021?",
+    "answer": "It decreased by 15.3 percentage points, from 14.7% in 2021 to (0.6)% in 2022."
+  },
+  {
+    "financebench_id": "financebench_id_03473",
+    "company": "Coca-Cola",
+    "question": "What is the FY2017 return on assets (ROA) for Coca Cola? ROA is defined as: FY2017 net income / (average total assets between FY2016 and FY2017). Round your answer to two decimal places. Give a response to the question by relying on the details shown in the balance sheet and the P&L statement.",
+    "answer": "Cannot determine the FY2017 ROA due to insufficient data (average total assets for 2016 and 2017 are not provided). The only supplied figure is 2017 net income of 1,248 million."
+  },
+  {
+    "financebench_id": "financebench_id_10130",
+    "company": "Corning",
+    "question": "Based on the information provided primarily in the balance sheet and the statement of income, what is FY2020 days payable outstanding (DPO) for Corning? DPO is defined as: 365 * (average accounts payable between FY2019 and FY2020) / (FY2020 COGS + change in inventory between FY2019 and FY2020). Round your answer to two decimal places.",
+    "answer": "The question cannot be answered because the computed metrics indicate insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_06272",
+    "company": "Coca-Cola",
+    "question": "What is Coca Cola's FY2022 dividend payout ratio (using total cash dividends paid and net income attributable to shareholders)? Round answer to two decimal places. Answer the question asked by assuming you only have access to information clearly displayed in the cash flow statement and the income statement.",
+    "answer": "The Coca-Cola Company's FY2022 dividend payout ratio is 79.82%."
+  },
+  {
+    "financebench_id": "financebench_id_02981",
+    "company": "Corning",
+    "question": "Taking into account the information outlined in the income statement, what is the FY2019 - FY2021 3 year average unadjusted operating income % margin for Corning? Answer in units of percents and round to one decimal place.",
+    "answer": "Cannot be answered: the computed metrics indicate insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_09724",
+    "company": "Coca-Cola",
+    "question": "What is Coca Cola's FY2021 COGS % margin? Calculate what was asked by utilizing the line items clearly shown in the income statement.",
+    "answer": "Coca-Cola's FY2021 COGS margin was 39.73%."
+  },
+  {
+    "financebench_id": "financebench_id_01346",
+    "company": "Corning",
+    "question": "How much has the effective tax rate of Corning changed between FY2021 and FY2022?",
+    "answer": "ERROR: Error code: 429 - {'error': {'code': 'RateLimitReached', 'message': 'Your requests to gpt-5-nano for gpt-5-nano in Sweden Central have exceeded the token rate limit for your current AIServices S0 pricing tier. This request was for ChatCompletions_Create under Azure OpenAI API version 2024-12-01-preview. Please retry after 3 seconds. To increase your default rate limit, visit: https://aka.ms/oai/quotaincrease.'}}"
+  },
+  {
+    "financebench_id": "financebench_id_04209",
+    "company": "Costco",
+    "question": "Using only the information within the balance sheet, how much total assets did Costco have at the end of FY2021? Answer in USD millions.",
+    "answer": "59,268 USD millions."
+  },
+  {
+    "financebench_id": "financebench_id_00005",
+    "company": "Corning",
+    "question": "Does Corning have positive working capital based on FY2022 data? If working capital is not a useful or relevant metric for this company, then please state that and explain why.",
+    "answer": "Yes. Corning has positive working capital in FY2022, amounting to 2,278 million. The current ratio for 2022 is 1.4:1."
+  },
+  {
+    "financebench_id": "financebench_id_05915",
+    "company": "CVS Health",
+    "question": "What is the FY2018 fixed asset turnover ratio for CVS Health? Fixed asset turnover ratio is defined as: FY2018 revenue / (average PP&E between FY2017 and FY2018). Round your answer to two decimal places. Calculate what was asked by utilizing the line items clearly shown in the P&L statement and the balance sheet.",
+    "answer": "The question cannot be answered because FY2018 revenue data is not provided in the provided facts."
+  },
+  {
+    "financebench_id": "financebench_id_01107",
+    "company": "CVS Health",
+    "question": "Has CVS Health reported any materially important ongoing legal battles from 2022, 2021 and 2020?",
+    "answer": "The question cannot be answered due to insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_01244",
+    "company": "CVS Health",
+    "question": "Has CVS Health paid dividends to common shareholders in Q2 of FY2022?",
+    "answer": "Yes. CVS Health paid a quarterly cash dividend per share of 0.55 in Q2 FY2022."
+  },
+  {
+    "financebench_id": "financebench_id_00790",
+    "company": "CVS Health",
+    "question": "Is CVS Health a capital-intensive business based on FY2022 data?",
+    "answer": "Based on FY2022 data, CVS Health's gross capital expenditures were 2.7 billion dollars and net cash provided by operating activities was 16,177 million dollars, indicating it is not a capital-intensive business."
+  },
+  {
+    "financebench_id": "financebench_id_04103",
+    "company": "General Mills",
+    "question": "What is the FY2019 cash conversion cycle (CCC) for General Mills? CCC is defined as: DIO + DSO - DPO. DIO is defined as: 365 * (average inventory between FY2018 and FY2019) / (FY2019 COGS). DSO is defined as: 365 * (average accounts receivable between FY2018 and FY2019) / (FY2019 Revenue). DPO is defined as: 365 * (average accounts payable between FY2018 and FY2019) / (FY2019 COGS + change in inventory between FY2018 and FY2019). Round your answer to two decimal places. Address the question by using the line items and information shown within the income statement and the balance sheet.",
+    "answer": "The question cannot be answered because the provided data is insufficient."
+  },
+  {
+    "financebench_id": "financebench_id_00839",
+    "company": "Foot Locker",
+    "question": "Does Foot Locker's new CEO have previous CEO experience in a similar company to Footlocker?",
+    "answer": "The provided information does not mention Foot Locker's new CEO or their previous CEO experience, so this question cannot be answered."
+  },
+  {
+    "financebench_id": "financebench_id_03471",
+    "company": "General Mills",
+    "question": "By drawing conclusions from the information stated only in the statement of financial position, what is General Mills's FY2020 working capital ratio? Define working capital ratio as total current assets divided by total current liabilities. Round your answer to two decimal places.",
+    "answer": "General Mills's FY2020 working capital ratio is 0.68."
+  },
+  {
+    "financebench_id": "financebench_id_04854",
+    "company": "General Mills",
+    "question": "According to the information provided in the statement of cash flows, what is the FY2020 free cash flow (FCF) for General Mills? FCF here is defined as: (cash from operations - capex). Answer in USD millions.",
+    "answer": "The FY2020 free cash flow (FCF) is USD 3,215.4 million."
+  },
+  {
+    "financebench_id": "financebench_id_10136",
+    "company": "General Mills",
+    "question": "We want to calculate a financial metric. Please help us compute it by basing your answers off of the cash flow statement and the income statement. Here's the question: what is the FY2022 retention ratio (using total cash dividends paid and net income attributable to shareholders) for General Mills? Round answer to two decimal places.",
+    "answer": "The question cannot be answered due to insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_00822",
+    "company": "Foot Locker",
+    "question": "Were there any board member nominees who had substantially more votes against joining than the other nominees?",
+    "answer": "The question cannot be answered because the provided data does not include any information about votes or nominees."
+  },
+  {
+    "financebench_id": "financebench_id_00711",
+    "company": "Johnson & Johnson",
+    "question": "Roughly how many times has JnJ sold its inventory in FY2022? Calculate inventory turnover ratio for FY2022; if conventional inventory management is not meaningful for the company then state that and explain why.",
+    "answer": "Cannot answer. The data do not include 2022 inventory figures needed to compute inventory turnover (ending/average inventory for 2022 is not provided)."
+  },
+  {
+    "financebench_id": "financebench_id_00669",
+    "company": "Johnson & Johnson",
+    "question": "What drove gross margin change as of FY2022 for JnJ? If gross margin is not a useful metric for a company like this, then please state that and explain why.",
+    "answer": "The question cannot be answered due to insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_00956",
+    "company": "Johnson & Johnson",
+    "question": "Are JnJ's FY2022 financials that of a high growth company?",
+    "answer": "Cannot determine from the provided data whether JnJ's FY2022 financials indicate high growth. The data include 2022 debt, equity per share, and dividends but no FY2022 growth metrics or comparable growth figures. Therefore, the question cannot be answered."
+  },
+  {
+    "financebench_id": "financebench_id_01484",
+    "company": "Johnson & Johnson",
+    "question": "How did JnJ's US sales growth compare to international sales growth in FY2022?",
+    "answer": "US sales grew by 3.0% in FY2022, while international sales declined by 0.6%; the US growth outpaced international growth by 3.6 percentage points."
+  },
+  {
+    "financebench_id": "financebench_id_00651",
+    "company": "Johnson & Johnson",
+    "question": "Is growth in JnJ's adjusted EPS expected to accelerate in FY2023?",
+    "answer": "The question cannot be answered because the computed metrics indicate insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_01490",
+    "company": "Johnson & Johnson",
+    "question": "What is the amount of the gain accruing to JnJ as a result of the separation of its Consumer Health business segment, as of August 30, 2023?",
+    "answer": "The gain is approximately $20 billion."
+  },
+  {
+    "financebench_id": "financebench_id_01491",
+    "company": "Johnson & Johnson",
+    "question": "What is the amount of the cash proceeds that JnJ realised from the separation of Kenvue (formerly Consumer Health business segment), as of August 30, 2023?",
+    "answer": "The cash proceeds from the Kenvue debt offering and IPO were 13.2 billion dollars."
+  },
+  {
+    "financebench_id": "financebench_id_01488",
+    "company": "Johnson & Johnson",
+    "question": "Which business segment of JnJ will be treated as a discontinued operation from August 30, 2023 onward?",
+    "answer": "The Consumer Health segment."
+  },
+  {
+    "financebench_id": "financebench_id_00299",
+    "company": "JPMorgan",
+    "question": "Which of JPM's business segments had the lowest net revenue in 2021 Q1?",
+    "answer": "Cannot answer. The computed metrics indicate insufficient data to determine which JPM segment had the lowest net revenue in 2021 Q1."
+  },
+  {
+    "financebench_id": "financebench_id_01487",
+    "company": "Johnson & Johnson",
+    "question": "Did JnJ's net earnings as a percent of sales increase in Q2 of FY2023 compared to Q2 of FY2022?",
+    "answer": "Yes. J&J\u2019s net earnings as a percent of sales rose from 20.0% in Q2 FY2022 to 20.1% in Q2 FY2023."
+  },
+  {
+    "financebench_id": "financebench_id_02119",
+    "company": "JPMorgan",
+    "question": "If JPM went bankrupted by the end by 2021 Q1 and liquidated all of its assets to pay its shareholders, how much could each shareholder get?",
+    "answer": "Each shareholder could receive $68.38 per share."
+  },
+  {
+    "financebench_id": "financebench_id_00394",
+    "company": "JPMorgan",
+    "question": "In 2022 Q2, which of JPM's business segments had the highest net income?",
+    "answer": "The question cannot be answered. The computed metrics indicate insufficient data for 2022 Q2."
+  },
+  {
+    "financebench_id": "financebench_id_02049",
+    "company": "JPMorgan",
+    "question": "Looking at VaR, did the risk that JPM faced in the second fiscal quarter of 2023 decrease compared to the same period in the prior year?",
+    "answer": "Yes. The Total VaR decreased from 63 million in 2022 to 47 million in 2023, a decline of 16 million."
+  },
+  {
+    "financebench_id": "financebench_id_04412",
+    "company": "Lockheed Martin",
+    "question": "We need to calculate a reasonable approximation (or exact number if possible) of a financial metric. Basing your judgment by information plainly provided in the balance sheet and the P&L statement, what is Lockheed Martin's FY2020 asset turnover ratio? Asset turnover ratio is defined as: FY2020 revenue / (average total assets between FY2019 and FY2020). Round your answer to two decimal places.",
+    "answer": "Lockheed Martin's FY2020 asset turnover ratio is 1.33."
+  },
+  {
+    "financebench_id": "financebench_id_10499",
+    "company": "Kraft Heinz",
+    "question": "What is Kraft Heinz's FY2019 inventory turnover ratio? Inventory turnover ratio is defined as: (FY2019 COGS) / (average inventory between FY2018 and FY2019). Round your answer to two decimal places. Please base your judgments on the information provided primarily in the balance sheet and the P&L statement.",
+    "answer": "The FY2019 inventory turnover ratio for Kraft Heinz is 6.25."
+  },
+  {
+    "financebench_id": "financebench_id_00206",
+    "company": "JPMorgan",
+    "question": "Are JPM's gross margins historically consistent (not fluctuating more than roughly 2% each year)? If gross margins are not a relevant metric for a company like this, then please state that and explain why.",
+    "answer": "The question cannot be answered because the computed metrics indicate insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_03031",
+    "company": "Lockheed Martin",
+    "question": "What is Lockheed Martin's FY2021 net working capital? Define net working capital as total current assets less total current liabilities. Answer in USD millions. Respond to the question by assuming the perspective of an investment analyst who can only use the details shown within the balance sheet.",
+    "answer": "Lockheed Martin's FY2021 net working capital is 5,445 million USD."
+  },
+  {
+    "financebench_id": "financebench_id_04171",
+    "company": "MGM Resorts",
+    "question": "Basing your judgments off of the balance sheet, what is the year end FY2018 amount of accounts payable for MGM Resorts? Answer in USD millions.",
+    "answer": "The year-end FY2018 accounts payable is 302.578 USD millions."
+  },
+  {
+    "financebench_id": "financebench_id_03718",
+    "company": "Lockheed Martin",
+    "question": "What is Lockheed Martin's 2 year total revenue CAGR from FY2020 to FY2022 (in units of percents and round to one decimal place)? Provide a response to the question by primarily using the statement of income.",
+    "answer": "The 2-year total revenue CAGR from FY2020 to FY2022 is 0.4%."
+  },
+  {
+    "financebench_id": "financebench_id_03849",
+    "company": "MGM Resorts",
+    "question": "What is the FY2018 - FY2020 3 year average of capex as a % of revenue for MGM Resorts? Answer in units of percents and round to one decimal place. Please utilize information provided primarily within the statement of cash flows and the statement of income.",
+    "answer": "The question cannot be answered because the provided data is insufficient to compute the 3-year average capex as a percentage of revenue for MGM Resorts."
+  },
+  {
+    "financebench_id": "financebench_id_00382",
+    "company": "MGM Resorts",
+    "question": "Which region had the Highest EBITDAR Contribution for MGM during FY2022?",
+    "answer": "The question cannot be answered with the provided data. The available information only includes Adjusted Property EBITDAR for 2022 (3,142,308 thousand) and does not include any regional breakdown."
+  },
+  {
+    "financebench_id": "financebench_id_01254",
+    "company": "MGM Resorts",
+    "question": "Has MGM Resorts paid dividends to common shareholders in FY2022?",
+    "answer": "Yes. MGM Resorts paid dividends to common shareholders in FY2022, with total dividends paid of 4 million dollars."
+  },
+  {
+    "financebench_id": "financebench_id_01911",
+    "company": "MGM Resorts",
+    "question": "What was MGM's interest coverage ratio using FY2022 Adjusted EBIT as the numerator and annual Interest Expense as the denominator?",
+    "answer": "The question cannot be answered due to insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_01912",
+    "company": "MGM Resorts",
+    "question": "Which region had the worst topline performance for MGM during FY2022?",
+    "answer": "Cannot be answered: the computed metrics indicate insufficient data to determine the regional topline performance for MGM in FY2022. MGM China net revenues were 674 million USD in 2022."
+  },
+  {
+    "financebench_id": "financebench_id_04700",
+    "company": "Microsoft",
+    "question": "What is the FY2016 COGS for Microsoft? Please state answer in USD millions. Provide a response to the question by primarily using the statement of income.",
+    "answer": "FY2016 COGS for Microsoft: 32,780 USD millions."
+  },
+  {
+    "financebench_id": "financebench_id_00407",
+    "company": "MGM Resorts",
+    "question": "Which type of debt received the largest investment among the short term investments for MGM in H1 FY2023?",
+    "answer": "Corporate bonds had the largest investment among the short-term investments, amounting to 416,420 (in thousands)."
+  },
+  {
+    "financebench_id": "financebench_id_03282",
+    "company": "Netflix",
+    "question": "What is Netflix's year end FY2017 total current liabilities (in USD millions)? Base your judgments on the information provided primarily in the balance sheet.",
+    "answer": "Netflix's year-end FY2017 total current liabilities were 5,466.312 USD millions."
+  },
+  {
+    "financebench_id": "financebench_id_00552",
+    "company": "Microsoft",
+    "question": "Has Microsoft increased its debt on balance sheet between FY2023 and the FY2022 period?",
+    "answer": "No. Total debt decreased from 49,781 million (June 30, 2022) to 47,237 million (June 30, 2023), a change of \u22122,544 million."
+  },
+  {
+    "financebench_id": "financebench_id_04302",
+    "company": "Nike",
+    "question": "We need to calculate a reasonable approximation (or exact number if possible) of a financial metric. Basing your judgment by information plainly provided in the statement of income, what is Nike's three year average of cost of goods sold as a % of revenue from FY2016 to FY2018? Answer in units of percents and round to one decimal place.",
+    "answer": "Cannot answer: the provided data are insufficient to calculate Nike's three-year average cost of goods sold as a percentage of revenue for FY2016\u2013FY2018."
+  },
+  {
+    "financebench_id": "financebench_id_03531",
+    "company": "Nike",
+    "question": "According to the details clearly outlined within the balance sheet, how much total current assets did Nike have at the end of FY2019? Answer in USD millions.",
+    "answer": "Nike had total current assets of 16,525 USD millions at the end of FY2019."
+  },
+  {
+    "financebench_id": "financebench_id_04458",
+    "company": "Netflix",
+    "question": "We want to calculate a financial metric. Please help us compute it by basing your answers off of the statement of income and the statement of cash flows. Here's the question: what is the FY2015 unadjusted EBITDA % margin for Netflix? Calculate unadjusted EBITDA using unadjusted operating income and D&A (from cash flow statement).",
+    "answer": "The FY2015 unadjusted EBITDA margin is 5.4297278%."
+  },
+  {
+    "financebench_id": "financebench_id_04080",
+    "company": "Nike",
+    "question": "When primarily referencing the income statement and the statement of financial position, what is the FY2021 inventory turnover ratio for Nike? Inventory turnover ratio is defined as: (FY2021 COGS) / (average inventory between FY2020 and FY2021). Round your answer to two decimal places.",
+    "answer": "The FY2021 inventory turnover ratio is 4.00."
+  },
+  {
+    "financebench_id": "financebench_id_01163",
+    "company": "Nike",
+    "question": "Among operations, investing, and financing activities, which brought in the most (or lost the least) cash flow for Nike in FY2023?",
+    "answer": "Operations brought in the most cash flow in FY2023, with cash provided by operations at 5,841 million dollars."
+  },
+  {
+    "financebench_id": "financebench_id_04980",
+    "company": "PepsiCo",
+    "question": "What is the FY2021 capital expenditure amount (in USD billions) for PepsiCo? Respond to the question by assuming the perspective of an investment analyst who can only use the details shown within the statement of cash flows.",
+    "answer": "The FY2021 capital expenditure for PepsiCo is 4.625 billion USD."
+  },
+  {
+    "financebench_id": "financebench_id_01009",
+    "company": "PepsiCo",
+    "question": "What are the geographies that Pepsico primarily operates in as of FY2022?",
+    "answer": "The question cannot be answered with the provided data."
+  },
+  {
+    "financebench_id": "financebench_id_00080",
+    "company": "Paypal",
+    "question": "Does Paypal have positive working capital based on FY2022 data? If working capital is not a useful or relevant metric for this company, then please state that and explain why.",
+    "answer": "Yes, Paypal had positive working capital in FY2022, amounting to 12,516 million USD."
+  },
+  {
+    "financebench_id": "financebench_id_01328",
+    "company": "PepsiCo",
+    "question": "What is the quantity of restructuring costs directly outlined in Pepsico's income statements for FY2022? If restructuring costs are not explicitly outlined then state 0.",
+    "answer": "The restructuring costs directly outlined in Pepsico's income statements for FY2022 were 411 million."
+  },
+  {
+    "financebench_id": "financebench_id_04481",
+    "company": "PepsiCo",
+    "question": "What is the FY2022 unadjusted EBITDA % margin for PepsiCo? Calculate unadjusted EBITDA using unadjusted operating income and D&A (from cash flow statement). Give a response to the question by relying on the details shown in the statement of cash flows and the P&L statement.",
+    "answer": "The question cannot be answered because the provided data is insufficient."
+  },
+  {
+    "financebench_id": "financebench_id_00735",
+    "company": "PepsiCo",
+    "question": "Has Pepsico reported any materially important ongoing legal battles from FY2022 and FY2021?",
+    "answer": "Insufficient data to answer. The provided facts do not indicate any materially important ongoing legal battles for PepsiCo in FY2022 or FY2021."
+  },
+  {
+    "financebench_id": "financebench_id_03620",
+    "company": "PepsiCo",
+    "question": "What is the FY2022 unadjusted EBITDA less capex for PepsiCo? Define unadjusted EBITDA as unadjusted operating income + depreciation and amortization [from cash flow statement]. Answer in USD millions. Respond to the question by assuming the perspective of an investment analyst who can only use the details shown within the statement of cash flows and the income statement.",
+    "answer": "The question cannot be answered due to insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_01290",
+    "company": "Boeing",
+    "question": "Who are the primary customers of Boeing as of FY2022?",
+    "answer": "ERROR: Error code: 429 - {'error': {'code': 'RateLimitReached', 'message': 'Your requests to gpt-5-nano for gpt-5-nano in Sweden Central have exceeded the token rate limit for your current AIServices S0 pricing tier. This request was for ChatCompletions_Create under Azure OpenAI API version 2024-12-01-preview. Please retry after 12 seconds. To increase your default rate limit, visit: https://aka.ms/oai/quotaincrease.'}}"
+  },
+  {
+    "financebench_id": "financebench_id_01482",
+    "company": "PepsiCo",
+    "question": "At the Pepsico AGM held on May 3, 2023, what was the outcome of the shareholder vote on the shareholder proposal for a congruency report by Pepsico on net-zero emissions policies?",
+    "answer": "The shareholder vote on the congruency report for net-zero emissions policies was defeated. For: 19,718,780 shares; Against: 977,228,788 shares (Abstain: 23,200,321; Broker Non-Votes: 172,969,325)."
+  },
+  {
+    "financebench_id": "financebench_id_00705",
+    "company": "PepsiCo",
+    "question": "By how much did Pepsico increase its unsecured five year revolving credit agreement on May 26, 2023?",
+    "answer": "The unsecured five-year revolving credit agreement was increased by 750,000,000."
+  },
+  {
+    "financebench_id": "financebench_id_00882",
+    "company": "PepsiCo",
+    "question": "As of May 26, 2023, what is the total amount Pepsico may borrow under its unsecured revolving credit agreements?",
+    "answer": "The total unsecured revolving credit capacity is $8,400,000,000."
+  },
+  {
+    "financebench_id": "financebench_id_01476",
+    "company": "PepsiCo",
+    "question": "As of FY2023Q1, by how many percentage points did Pepsico raise full year guidance in respect of core constant currency EPS growth?",
+    "answer": "It increased by 1 percentage point."
+  },
+  {
+    "financebench_id": "financebench_id_01474",
+    "company": "PepsiCo",
+    "question": "As of FY2023Q1, why did Pepsico raise full year guidance for FY2023?",
+    "answer": "As of FY2023Q1, Pepsico raised full-year guidance because its organic revenue growth and core constant currency EPS growth exceeded the prior guidance. Organic revenue growth was 8% (vs. 6%), and core constant currency EPS growth was 9% (vs. 8%)."
+  },
+  {
+    "financebench_id": "financebench_id_02416",
+    "company": "Pfizer",
+    "question": "What are three main companies acquired by Pfizer mentioned in this 10K report?",
+    "answer": "Hospira, Medivation, and Anacor."
+  },
+  {
+    "financebench_id": "financebench_id_00283",
+    "company": "Pfizer",
+    "question": "How much does Pfizer expect to pay to spin off Upjohn in the future in USD million?",
+    "answer": "ERROR: Error code: 429 - {'error': {'code': 'RateLimitReached', 'message': 'Your requests to gpt-5-nano for gpt-5-nano in Sweden Central have exceeded the token rate limit for your current AIServices S0 pricing tier. This request was for ChatCompletions_Create under Azure OpenAI API version 2024-12-01-preview. Please retry after 12 seconds. To increase your default rate limit, visit: https://aka.ms/oai/quotaincrease.'}}"
+  },
+  {
+    "financebench_id": "financebench_id_00302",
+    "company": "Pfizer",
+    "question": "Did Pfizer grow its PPNE between FY20 and FY21?",
+    "answer": "The question cannot be answered due to insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_00702",
+    "company": "Pfizer",
+    "question": "Were there any potential events that are not in Pfizer's standard business operations that substantially increased net income in 2019?",
+    "answer": "Yes. The gain on completion of the Consumer Healthcare JV transaction in 2019 was 8,086 million dollars."
+  },
+  {
+    "financebench_id": "financebench_id_00724",
+    "company": "Pfizer",
+    "question": "For Pfizer, which geographic region had the biggest drop in Q22023 year over year revenues (on a percentage basis)?",
+    "answer": "The International region had the biggest drop, down 51% year over year."
+  },
+  {
+    "financebench_id": "financebench_id_00746",
+    "company": "Ulta Beauty",
+    "question": "Which debt securities are registered to trade on a national securities exchange under Ulta Beauty's name as of FY2023?",
+    "answer": "Cannot determine from the provided data. The data set is insufficient to identify Ulta Beauty debt securities registered to trade on a national securities exchange under its name as of FY2023."
+  },
+  {
+    "financebench_id": "financebench_id_00521",
+    "company": "Ulta Beauty",
+    "question": "What are major acquisitions that Ulta Beauty has done in FY2023 and FY2022?",
+    "answer": "The provided data does not include any information about Ulta Beauty's major acquisitions in FY2023 or FY2022, so the question cannot be answered."
+  },
+  {
+    "financebench_id": "financebench_id_02419",
+    "company": "Pfizer",
+    "question": "As of Q2'2023, is Pfizer spinning off any large business segments?",
+    "answer": "The question cannot be answered from the provided data due to insufficient information about Pfizer's spin-off activity as of Q2'2023."
+  },
+  {
+    "financebench_id": "financebench_id_00606",
+    "company": "Ulta Beauty",
+    "question": "Did Ulta Beauty's wages expense as a percent of net sales increase or decrease in FY2023?",
+    "answer": "The question cannot be answered due to insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_00605",
+    "company": "Ulta Beauty",
+    "question": "What percent of Ulta Beauty's total spend on stock repurchases for FY 2023 occurred in Q4 of FY2023?",
+    "answer": "33.91% of the total stock repurchase spend for FY2023 occurred in Q4 FY2023."
+  },
+  {
+    "financebench_id": "financebench_id_00603",
+    "company": "Ulta Beauty",
+    "question": "What drove the increase in Ulta Beauty's merchandise inventories balance at end of FY2023?",
+    "answer": "It was driven by net new stores opened, totaling 37 stores in fiscal 2023."
+  },
+  {
+    "financebench_id": "financebench_id_00601",
+    "company": "Ulta Beauty",
+    "question": "What drove the reduction in SG&A expense as a percent of net sales in FY2023?",
+    "answer": "Advertising expense, net as a percentage of net sales declined by 0.8 percentage points (4.5% to 3.7%), contributing to the SG&A percentage decrease (23.9% in 2022 to 23.5% in 2023)."
+  },
+  {
+    "financebench_id": "financebench_id_02024",
+    "company": "Verizon",
+    "question": "As of FY 2021, how much did Verizon expect to pay for its retirees in 2024?",
+    "answer": "Verizon expected to pay $1,097 million for pension benefits in 2024."
+  },
+  {
+    "financebench_id": "financebench_id_00859",
+    "company": "Verizon",
+    "question": "Among all of the derivative instruments that Verizon used to manage the exposure to fluctuations of foreign currencies exchange rates or interest rates, which one had the highest notional value in FY 2021?",
+    "answer": "Cross currency swaps had the highest notional value in FY 2021, at 32,502 million dollars."
+  },
+  {
+    "financebench_id": "financebench_id_00566",
+    "company": "Verizon",
+    "question": "Has Verizon increased its debt on balance sheet between 2022 and the 2021 fiscal period?",
+    "answer": "No. Verizon's total debt decreased from 150.9 billion dollars in 2021 to 150.6 billion dollars in 2022."
+  },
+  {
+    "financebench_id": "financebench_id_06247",
+    "company": "Walmart",
+    "question": "What is FY2018 days payable outstanding (DPO) for Walmart? DPO is defined as: 365 * (average accounts payable between FY2017 and FY2018) / (FY2018 COGS + change in inventory between FY2017 and FY2018). Round your answer to two decimal places. Please base your judgments on the information provided primarily in the statement of financial position and the P&L statement.",
+    "answer": "The question cannot be answered due to insufficient data."
+  },
+  {
+    "financebench_id": "financebench_id_00216",
+    "company": "Verizon",
+    "question": "Does Verizon have a reasonably healthy liquidity profile based on its quick ratio for FY 2022? If the quick ratio is not relevant to measure liquidity, please state that and explain why.",
+    "answer": "Cannot answer: there is insufficient data to compute Verizon's quick ratio for FY 2022 from the provided facts."
+  },
+  {
+    "financebench_id": "financebench_id_04784",
+    "company": "Walmart",
+    "question": "Based on the information provided primarily in the statement of income, what is the FY2018 - FY2019 change in unadjusted operating income % margin for Walmart? Answer in units of percents and round to one decimal place.",
+    "answer": "The FY2018\u2013FY2019 change in unadjusted operating income margin is -0.1%."
+  },
+  {
+    "financebench_id": "financebench_id_00215",
+    "company": "Verizon",
+    "question": "Is Verizon a capital intensive business based on FY 2022 data?",
+    "answer": "Yes. The computed metric Capital intensity (CapEx as % of operating revenues FY2022) is 16.87%, indicating Verizon is a capital-intensive business based on FY2022 data."
+  },
+  {
+    "financebench_id": "financebench_id_06741",
+    "company": "Walmart",
+    "question": "What is the FY2018 - FY2020 3 year average unadjusted EBITDA % margin for Walmart? Define unadjusted EBITDA as unadjusted operating income + depreciation and amortization from the cash flow statement. Answer in units of percents and round to one decimal place. Calculate what was asked by utilizing the line items clearly shown in the P&L statement and the cash flow statement.",
+    "answer": "The FY2018\u20132020 3-year average unadjusted EBITDA margin is 6.2%."
+  }
+]
