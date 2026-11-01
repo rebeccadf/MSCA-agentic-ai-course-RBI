@@ -1,0 +1,242 @@
+[
+  {
+    "financebench_id": "financebench_id_00460",
+    "question_type": "novel-generated",
+    "question": "Was there any change in the number of Best Buy stores between Q2 of FY2024 and FY2023?",
+    "gold_answer": "Yes, there is decline in number stores by 1.32% from 982 stores in Q2 FY 2023 to 969 by the end of Q2 FY2024.",
+    "llm_answer": "Yes. Best Buy store count fell by 23 stores: 930 stores at the end of Q2 FY2023 versus 907 stores at the end of Q2 FY2024 (a decrease of 23 stores).",
+    "correct": 0
+  },
+  {
+    "financebench_id": "financebench_id_01912",
+    "question_type": "novel-generated",
+    "question": "Which region had the worst topline performance for MGM during FY2022?",
+    "gold_answer": "MGM China experienced the worst topline performance amongst the other regions presented. Its revenue declined 44% in FY2022 whereas the other regions presented increased their revenues.",
+    "llm_answer": "MGM China. Net revenues fell to $674 million in FY2022 from $1.21 billion in FY2021 (a 44% decline) and MGM China posted an Adjusted Property EBITDAR loss of $203 million in 2022 versus $25 million in 2021.",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_02981",
+    "question_type": "metrics-generated",
+    "question": "Taking into account the information outlined in the income statement, what is the FY2019 - FY2021 3 year average unadjusted operating income % margin for Corning? Answer in units of percents and round to one decimal place.",
+    "gold_answer": "10.3%",
+    "llm_answer": "The FY2019\u20132021 3-year average unadjusted operating income margin for Corning is 10.3%.",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_01275",
+    "question_type": "domain-relevant",
+    "question": "Among operations, investing, and financing activities, which brought in the most (or lost the least) cash flow for Best Buy in FY2023?",
+    "gold_answer": "Best Buy generated the most cash flow from operating activities in FY 2023 ($1.8 bn)",
+    "llm_answer": "Operating activities brought in the most cash flow, at $1,824 million for FY2023.",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_00302",
+    "question_type": "novel-generated",
+    "question": "Did Pfizer grow its PPNE between FY20 and FY21?",
+    "gold_answer": "Yes, change in PPNE was positive year over year",
+    "llm_answer": "Yes. Pfizer's PP&E, net increased from 13,745 MILLIONS to 14,882 MILLIONS (a rise of 1,137 MILLIONS), or about 8.27%.",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_00080",
+    "question_type": "domain-relevant",
+    "question": "Does Paypal have positive working capital based on FY2022 data? If working capital is not a useful or relevant metric for this company, then please state that and explain why.",
+    "gold_answer": "Yes. Paypal has a positive working capital of $ 1.6Bn as of FY2022 end.",
+    "llm_answer": "Yes. PayPal has positive working capital of 12,416 million based on FY2022 data.",
+    "correct": 0
+  },
+  {
+    "financebench_id": "financebench_id_00464",
+    "question_type": "novel-generated",
+    "question": "Is Boeing's business subject to cyclicality?",
+    "gold_answer": "Yes, Boeing's business is subject to cyclicality due to its exposure to the airline industry which is a cyclical industry.",
+    "llm_answer": "Yes. Boeing\u2019s Commercial Airplanes business is exposed to industry cycles: the filing states the airline industry \u201chas been cyclical\u201d and demand is driven by macro factors (economic growth, fuel prices, pandemics, etc.). Quantitatively, Commercial Airplanes generated $25,867 million of $66,608 million consolidated revenue in 2022 (\u224838.8%) and represented $329,824 million of $404,381 million total backlog (\u224881.6%), with most backlog converting over several years \u2014 all factors that amplify cyclicality.",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_04700",
+    "question_type": "metrics-generated",
+    "question": "What is the FY2016 COGS for Microsoft? Please state answer in USD millions. Provide a response to the question by primarily using the statement of income.",
+    "gold_answer": "$32780.00",
+    "llm_answer": "The FY2016 COGS (Total cost of revenue) for Microsoft was 32,780 USD millions.",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_01351",
+    "question_type": "domain-relevant",
+    "question": "How much has the effective tax rate of American Express changed between FY2021 and FY2022?",
+    "gold_answer": "The effective tax rate for American Express has changed/dropped from 24.6% in FY 2021 to 21.6% in FY 2022.",
+    "llm_answer": "It decreased by 3.0 percentage points.",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_04980",
+    "question_type": "metrics-generated",
+    "question": "What is the FY2021 capital expenditure amount (in USD billions) for PepsiCo? Respond to the question by assuming the perspective of an investment analyst who can only use the details shown within the statement of cash flows.",
+    "gold_answer": "$4.60",
+    "llm_answer": "The FY2021 capital expenditure is -4.625 USD billions.",
+    "correct": 0
+  },
+  {
+    "financebench_id": "financebench_id_00711",
+    "question_type": "domain-relevant",
+    "question": "Roughly how many times has JnJ sold its inventory in FY2022? Calculate inventory turnover ratio for FY2022; if conventional inventory management is not meaningful for the company then state that and explain why.",
+    "gold_answer": "JnJ sold its inventory 2.7 times in FY2022.",
+    "llm_answer": "Inventory turnover for FY2022: 2.72 times. Thus, JnJ sold its inventory roughly 2.72 times in FY2022.",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_01346",
+    "question_type": "domain-relevant",
+    "question": "How much has the effective tax rate of Corning changed between FY2021 and FY2022?",
+    "gold_answer": "The effective tax rate of Corning has changed from 20% in FY2021 to 23% in FY 2022.",
+    "llm_answer": "It increased by 2.7 percentage points, from 20.2% in FY2021 to 22.9% in FY2022.",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_04080",
+    "question_type": "metrics-generated",
+    "question": "When primarily referencing the income statement and the statement of financial position, what is the FY2021 inventory turnover ratio for Nike? Inventory turnover ratio is defined as: (FY2021 COGS) / (average inventory between FY2020 and FY2021). Round your answer to two decimal places.",
+    "gold_answer": "3.46",
+    "llm_answer": "The FY2021 inventory turnover ratio is 3.46.",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_01490",
+    "question_type": "novel-generated",
+    "question": "What is the amount of the gain accruing to JnJ as a result of the separation of its Consumer Health business segment, as of August 30, 2023?",
+    "gold_answer": "JnJ will make a gain of approximately $20 billion from the separation of its Consumer Health business segment.",
+    "llm_answer": "Approximately $20 billion.",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_00956",
+    "question_type": "domain-relevant",
+    "question": "Are JnJ's FY2022 financials that of a high growth company?",
+    "gold_answer": "No, JnJ's FY2022 financials are not of a high growth company as sales grew by 1.3% in FY2022.",
+    "llm_answer": "No. Johnson & Johnson\u2019s FY2022 results do not reflect a high\u2011growth company \u2014 revenue grew only 1.3% to $94.9 billion (vs. +13.6% in 2021), net earnings fell ~14.1% to $17.94 billion, and operating cash flow declined ~9.5% to $21.19 billion. R&D was $14.60 billion (~15.4% of sales) and the company increased leverage (debt $39.7B, net debt $16.1B) following acquisitions, consistent with a large, mature healthcare firm focused on steady returns rather than high growth.",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_01028",
+    "question_type": "domain-relevant",
+    "question": "What are the geographies that American Express primarily operates in as of 2022?",
+    "gold_answer": "United States, EMEA, APAC, and LACC",
+    "llm_answer": "American Express\u2019s 2022 geographic reporting groups are: United States; EMEA (Europe, Middle East & Africa); APAC (Asia Pacific); and LACC (Latin America & Caribbean) (with a separate \u201cOther/Unallocated\u201d column for allocations).",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_00288",
+    "question_type": "novel-generated",
+    "question": "Was there any drop in Cash & Cash equivalents between FY 2023 and Q2 of FY2024?",
+    "gold_answer": "Yes, there was a decline of ~42% between FY2023 and Q2 of FY 2024.",
+    "llm_answer": "Yes. Cash and cash equivalents fell from $1,874 million at January 28, 2023 (FY2023) to $1,093 million at July 29, 2023 (Q2 FY2024), a decrease of $781 million.",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_02049",
+    "question_type": "novel-generated",
+    "question": "Looking at VaR, did the risk that JPM faced in the second fiscal quarter of 2023 decrease compared to the same period in the prior year?",
+    "gold_answer": "Yes. It decreased.",
+    "llm_answer": "Yes. Average total Risk Management VaR fell by $7 million year\u2011over\u2011year \u2014 from $54 million in Q2 2022 to $47 million in Q2 2023 \u2014 primarily due to reductions in Credit Portfolio VaR and fixed income.",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_00382",
+    "question_type": "novel-generated",
+    "question": "Which region had the Highest EBITDAR Contribution for MGM during FY2022?",
+    "gold_answer": "Las Vegas resorts contributed ~90% of company level EBITDAR during FY2022.",
+    "llm_answer": "Las Vegas Strip Resorts \u2014 Adjusted Property EBITDAR of $3,142,308 thousand (\u2248 $3.142 billion) in FY2022, the largest contribution among segments.",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_00540",
+    "question_type": "domain-relevant",
+    "question": "Roughly how many times has AES Corporation sold its inventory in FY2022? Calculate inventory turnover ratio for the FY2022; if conventional inventory management is not meaningful for the company then state that and explain why.",
+    "gold_answer": "AES has converted inventory 9.5 times in FY 2022.",
+    "llm_answer": "Roughly 12.14 times. The inventory turnover ratio for FY2022 is 12.14.",
+    "correct": 0
+  },
+  {
+    "financebench_id": "financebench_id_03620",
+    "question_type": "metrics-generated",
+    "question": "What is the FY2022 unadjusted EBITDA less capex for PepsiCo? Define unadjusted EBITDA as unadjusted operating income + depreciation and amortization [from cash flow statement]. Answer in USD millions. Respond to the question by assuming the perspective of an investment analyst who can only use the details shown within the statement of cash flows and the income statement.",
+    "gold_answer": "$9068.00",
+    "llm_answer": "FY2022 unadjusted EBITDA less capex is 9,068 USD millions.",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_00807",
+    "question_type": "domain-relevant",
+    "question": "Does 3M have a reasonably healthy liquidity profile based on its quick ratio for Q2 of FY2023? If the quick ratio is not relevant to measure liquidity, please state that and explain why.",
+    "gold_answer": "No. The quick ratio for 3M was 0.96 by Jun'23 close, which needs a bit of an improvement to touch the 1x mark",
+    "llm_answer": "Quick ratio: 0.847. 3M states it maintains a strong liquidity profile with cash on hand and U.S. commercial paper issuances, and believes it will have continuous access to the commercial paper market.",
+    "correct": 0
+  },
+  {
+    "financebench_id": "financebench_id_10499",
+    "question_type": "metrics-generated",
+    "question": "What is Kraft Heinz's FY2019 inventory turnover ratio? Inventory turnover ratio is defined as: (FY2019 COGS) / (average inventory between FY2018 and FY2019). Round your answer to two decimal places. Please base your judgments on the information provided primarily in the balance sheet and the P&L statement.",
+    "gold_answer": "6.25",
+    "llm_answer": "The FY2019 inventory turnover ratio is 6.25.",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_00394",
+    "question_type": "novel-generated",
+    "question": "In 2022 Q2, which of JPM's business segments had the highest net income?",
+    "gold_answer": "Corporate & Investment Bank. Its net income was $3725 million.",
+    "llm_answer": "The Corporate & Investment Bank had the highest net income in Q2 2022: $3,725 million (vs. Consumer & Community Banking $3,100m; Asset & Wealth Management $1,004m; Commercial Banking $994m; Corporate: $(174)m).",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_01476",
+    "question_type": "novel-generated",
+    "question": "As of FY2023Q1, by how many percentage points did Pepsico raise full year guidance in respect of core constant currency EPS growth?",
+    "gold_answer": "Pepsico raised full year guidance in respect of core constant currency EPS growth by 1 percentage point.",
+    "llm_answer": "1 percentage point (from 8% to 9%).",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_03718",
+    "question_type": "metrics-generated",
+    "question": "What is Lockheed Martin's 2 year total revenue CAGR from FY2020 to FY2022 (in units of percents and round to one decimal place)? Provide a response to the question by primarily using the statement of income.",
+    "gold_answer": "0.4%",
+    "llm_answer": "Lockheed Martin's 2-year total revenue CAGR from FY2020 to FY2022 is 0.4%.",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_04209",
+    "question_type": "metrics-generated",
+    "question": "Using only the information within the balance sheet, how much total assets did Costco have at the end of FY2021? Answer in USD millions.",
+    "gold_answer": "$59268.00",
+    "llm_answer": "Total assets were 59,268 USD millions at the end of FY2021.",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_00438",
+    "question_type": "domain-relevant",
+    "question": "Does Adobe have an improving operating margin profile as of FY2022? If operating margin is not a useful metric for a company like this, then state that and explain why.",
+    "gold_answer": "No the operating margins of Adobe have recently declined from 36.8% in FY 2021 to 34.6% in FY2022. A drop by 2.2% in a year.",
+    "llm_answer": "Adobe\u2019s operating margin for 2022 was 34.64%, down from 36.76% in 2021, so FY2022 does not reflect an improving operating margin profile.",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_00724",
+    "question_type": "novel-generated",
+    "question": "For Pfizer, which geographic region had the biggest drop in Q22023 year over year revenues (on a percentage basis)?",
+    "gold_answer": "Developed Rest of the World",
+    "llm_answer": "Developed Rest of World \u2014 a 74% drop in Q2 2023 year-over-year revenue.",
+    "correct": 1
+  },
+  {
+    "financebench_id": "financebench_id_00605",
+    "question_type": "novel-generated",
+    "question": "What percent of Ulta Beauty's total spend on stock repurchases for FY 2023 occurred in Q4 of FY2023?",
+    "gold_answer": "36%. The answer here assumes FY2023 refers to the 12 months ended on January 28, 2023 (although the company refers to this period as its fiscal 2022.",
+    "llm_answer": "I can\u2019t compute that for FY2023 from the provided filing excerpts \u2014 they don\u2019t report FY2023 total repurchases or Q4 FY2023 repurchases. The excerpts do show fiscal 2022 repurchases: Q4 = $328.1M and FY = $900.0M, so for FY2022 Q4 represented 328.1/900.0 = 36.46% (\u224836.5%).",
+    "correct": 1
+  }
+]

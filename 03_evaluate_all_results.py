@@ -1,91 +1,43 @@
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
+import argparse
 import asyncio
 import json
-import re
 from pathlib import Path
-from dotenv import load_dotenv
-from datasets import load_dataset
-from openai import AsyncAzureOpenAI
 
-from agents import (
-    Agent,
-    Runner,
-    set_tracing_disabled,
-    OpenAIChatCompletionsModel
-)
+import mlflow
+from datasets import load_dataset
+
+from agents import Agent, Runner
+
+from llm import strong_model
+from rag import setup_mlflow
 
 # ============================================================
 # CONFIG
 # ============================================================
 
-RESULTS_PREFIX = "financebench_results"
-EVAL_PREFIX = "financebench_eval"
-RESULTS_DIR = Path(".")
+PROJECT_DIR = Path(__file__).parent
 CONCURRENCY = 2
 
 # ============================================================
 # FILE HELPERS
 # ============================================================
 
-def get_next_eval_file():
-    existing = list(RESULTS_DIR.glob(f"{EVAL_PREFIX}*.json"))
-    if not existing:
-        return RESULTS_DIR / f"{EVAL_PREFIX}.json"
-
-    indices = []
-    for f in existing:
-        m = re.match(rf"{EVAL_PREFIX}_(\d+)\.json", f.name)
-        if m:
-            indices.append(int(m.group(1)))
-        elif f.name == f"{EVAL_PREFIX}.json":
-            indices.append(0)
-
-    return RESULTS_DIR / f"{EVAL_PREFIX}_{max(indices)+1}.json"
-
-
-def load_all_model_answers():
-    answers = []
-    for f in RESULTS_DIR.glob(f"{RESULTS_PREFIX}*.json"):
-        try:
-            with f.open() as fh:
-                answers.extend(json.load(fh))
-        except Exception:
-            pass
-    return answers
-
-
-def load_completed_eval_ids():
-    completed = set()
-    for f in RESULTS_DIR.glob(f"{EVAL_PREFIX}*.json"):
-        try:
-            with f.open() as fh:
-                for r in json.load(fh):
-                    completed.add(r["financebench_id"])
-        except Exception:
-            pass
-    return completed
+def load_json(path: Path):
+    if path.exists():
+        with path.open() as f:
+            return json.load(f)
+    return []
 
 
 # ============================================================
-# ENV + CLIENT
+# MODEL
 # ============================================================
 
-load_dotenv()
-set_tracing_disabled(True)
-
-openai_client = AsyncAzureOpenAI(
-    api_key=os.getenv("AZURE_OPENAI_KEY"),
-    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-    api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
-    azure_deployment=os.getenv("AZURE_OPENAI_DEPLOYMENT"),
-)
-
-model = OpenAIChatCompletionsModel(
-    model=os.getenv("AZURE_OPENAI_DEPLOYMENT"),
-    openai_client=openai_client,
-)
+# The judge uses the strong model
+model = strong_model
 
 # ============================================================
 # JUDGE AGENT
@@ -120,7 +72,7 @@ Return EXACTLY one character:
 # JUDGE CALL (same style as your other agents)
 # ============================================================
 
-async def judge_answer(question, gold_answer, model_answer):
+async def judge_answer(question, gold_answer, model_answer, attempts=3):
     messages = [
         {
             "role": "user",
@@ -137,7 +89,17 @@ MODEL ANSWER:
         }
     ]
 
-    res = await Runner.run(judge, messages)
+    for attempt in range(1, attempts + 1):
+        try:
+            res = await Runner.run(judge, messages)
+            break
+        except Exception as e:
+            if attempt == attempts:
+                raise
+            wait = 5 * 2 ** (attempt - 1)
+            print(f"⚠️ Judge failed ({e}); retrying in {wait}s", flush=True)
+            await asyncio.sleep(wait)
+
     out = res.final_output.strip()
 
     if out.startswith("1"):
@@ -154,23 +116,28 @@ MODEL ANSWER:
 # ============================================================
 
 async def main():
-    print("🚀 Evaluation started", flush=True)
+    parser = argparse.ArgumentParser(description="Judge a run's answers against the gold answers.")
+    parser.add_argument("--run", default="full", help="Run name under runs/ (default: full)")
+    args = parser.parse_args()
 
-    eval_file = get_next_eval_file()
+    run_dir = PROJECT_DIR / "runs" / args.run
+    results_file = run_dir / "results.json"
+    eval_file = run_dir / "eval.json"
+
+    print("🚀 Evaluation started", flush=True)
     print(f"📁 Writing evaluation to: {eval_file}", flush=True)
 
     # Load datasets
     fb = load_dataset("Liadmagen/financebench_QA")["train"]
     gold_map = {r["financebench_id"]: r for r in fb}
 
-    model_answers = load_all_model_answers()
-    completed_ids = load_completed_eval_ids()
+    model_answers = load_json(results_file)
+    completed_ids = {r["financebench_id"] for r in load_json(eval_file)}
 
     print(f"📊 Model answers found: {len(model_answers)}", flush=True)
     print(f"✅ Already judged: {len(completed_ids)}", flush=True)
 
     semaphore = asyncio.Semaphore(CONCURRENCY)
-    results = []
 
     async def run_one(item):
         async with semaphore:
@@ -183,14 +150,19 @@ async def main():
 
             print(f"🔎 Judging id={fid}", flush=True)
 
-            correct = await judge_answer(
-                question=gold["question"],
-                gold_answer=gold["answer"],
-                model_answer=item["answer"],
-            )
+            try:
+                correct = await judge_answer(
+                    question=gold["question"],
+                    gold_answer=gold["answer"],
+                    model_answer=item["answer"],
+                )
+            except Exception as e:
+                print(f"❌ Could not judge id={fid}: {e}", flush=True)
+                return  # left unjudged, picked up on the next run
 
             result = {
                 "financebench_id": fid,
+                "question_type": gold["question_type"],
                 "question": gold["question"],
                 "gold_answer": gold["answer"],
                 "llm_answer": item["answer"],
@@ -198,12 +170,7 @@ async def main():
             }
 
             # SAVE IMMEDIATELY
-            if eval_file.exists():
-                with eval_file.open() as f:
-                    data = json.load(f)
-            else:
-                data = []
-
+            data = load_json(eval_file)
             data.append(result)
 
             with eval_file.open("w") as f:
@@ -215,6 +182,32 @@ async def main():
     await asyncio.gather(*tasks)
 
     print("✅ Evaluation finished", flush=True)
+    log_to_mlflow(run_dir, args.run, load_json(eval_file))
+
+
+def log_to_mlflow(run_dir: Path, run_name: str, evals):
+    """Log accuracy into the MLflow run that 02 created for this run folder."""
+    if not evals:
+        return
+
+    setup_mlflow("financebench-agents")
+    mlflow_id_file = run_dir / "mlflow_run_id.txt"
+    run_id = mlflow_id_file.read_text().strip() if mlflow_id_file.exists() else None
+
+    metrics = {
+        "judged": len(evals),
+        "accuracy": sum(r["correct"] for r in evals) / len(evals),
+    }
+    for qtype in sorted({r["question_type"] for r in evals if r.get("question_type")}):
+        subset = [r for r in evals if r.get("question_type") == qtype]
+        metrics[f"accuracy_{qtype}"] = sum(r["correct"] for r in subset) / len(subset)
+
+    with mlflow.start_run(run_id=run_id, run_name=run_name) as mlrun:
+        mlflow_id_file.write_text(mlrun.info.run_id)
+        mlflow.log_metrics(metrics)
+        mlflow.log_artifact(str(run_dir / "eval.json"))
+
+    print(f"📈 Logged to MLflow: accuracy={metrics['accuracy']:.2%}", flush=True)
 
 
 # ============================================================

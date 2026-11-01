@@ -1,50 +1,36 @@
-from llama_index.core import Document, VectorStoreIndex, Settings
-from llama_index.embeddings.huggingface import HuggingFaceEmbedding
-from llama_index.core.node_parser import SimpleNodeParser
-from llama_index.llms.azure_openai import AzureOpenAI
-from dotenv import load_dotenv
-import os
 from datasets import load_dataset
+from llama_index.core import Document, Settings
+from llama_index.core.node_parser import SentenceSplitter
+
+from rag import CHUNK_SIZE, CHUNK_OVERLAP, build_index, clean_filing
 
 
-load_dotenv()
-
-llm_model_name = "gpt-5-mini"
-llm_deploy_name = "gpt-5-mini"
-
-aoai_api_key = os.getenv("OPENAI_API_KEY")
-aoai_endpoint = "https://aa-dsa-training-msca.openai.azure.com/"
-aoai_api_version = "2024-12-01-preview"
-
-llm = AzureOpenAI(
-    engine=llm_deploy_name,
-    api_key=aoai_api_key,
-    azure_endpoint=aoai_endpoint,
-    api_version=aoai_api_version,
-    temperature=1,
+Settings.node_parser = SentenceSplitter(
+    chunk_size=CHUNK_SIZE,
+    chunk_overlap=CHUNK_OVERLAP,
+    paragraph_separator="\n",
 )
 
-Settings.embed_model = HuggingFaceEmbedding("BAAI/bge-small-en-v1.5")
-Settings.node_parser = SimpleNodeParser.from_defaults(
-    chunk_size=1024,
-    chunk_overlap=128
-)
-financebench_content_ds = load_dataset("Liadmagen/financebench_content")
-ds_small = financebench_content_ds["train"]
+content_ds = load_dataset("Liadmagen/financebench_content")["train"]
+qa_ds = load_dataset("Liadmagen/financebench_QA")["train"]
+
+# Only the filings that questions refer to are ever retrieved from
+needed_docs = set(qa_ds["doc_name"])
 
 documents = [
     Document(
-        text=row["text"],  
+        text=clean_filing(row["text_formatted"]),
         metadata={
             "doc_name": row["doc_name"],
-            "company": row["company"]
+            "company": row["company"],
+            "doc_type": row["doc_type"],
+            "doc_period": row["doc_period"],
         }
     )
-    for row in ds_small
+    for row in content_ds
+    if row["doc_name"] in needed_docs
 ]
+print(f"Indexing {len(documents)} filings into Chroma...", flush=True)
 
-index = VectorStoreIndex.from_documents(documents)
-
-
-index.storage_context.persist(persist_dir="./financebench_index")
+build_index(documents)
 print("Index saved!")

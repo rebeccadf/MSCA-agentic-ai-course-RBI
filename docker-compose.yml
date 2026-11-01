@@ -1,0 +1,45 @@
+services:
+  chroma:
+    image: chromadb/chroma:1.5.9
+    volumes:
+      - chroma-data:/data
+    ports:
+      - "8000:8000"
+
+  pipeline:
+    build: .
+    env_file: .env
+    environment:
+      CHROMA_HOST: chroma
+      CHROMA_PORT: "8000"
+      HF_HOME: /cache/huggingface
+      # Tracking lives in ./mlflow-docker; view with:
+      #   mlflow ui --backend-store-uri sqlite:///mlflow-docker/mlflow.db
+      MLFLOW_TRACKING_URI: sqlite:////app/mlflow-docker/mlflow.db
+      MLFLOW_ARTIFACT_ROOT: /app/mlflow-docker/artifacts
+    depends_on:
+      - chroma
+    volumes:
+      - ./runs:/app/runs
+      - ./mlflow-docker:/app/mlflow-docker
+      - hf-cache:/cache/huggingface
+    # e.g. docker compose run --rm pipeline --run docker-test --limit 10
+    command: ["--run", "full"]
+
+  index:
+    build: .
+    env_file: .env
+    environment:
+      CHROMA_HOST: chroma
+      CHROMA_PORT: "8000"
+      HF_HOME: /cache/huggingface
+    depends_on:
+      - chroma
+    volumes:
+      - hf-cache:/cache/huggingface
+    entrypoint: ["python", "01_build_financebench_index.py"]
+    profiles: ["setup"]
+
+volumes:
+  chroma-data:
+  hf-cache:
