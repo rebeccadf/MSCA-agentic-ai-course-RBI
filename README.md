@@ -2,7 +2,19 @@
 
 A multi-agent retrieval-augmented pipeline that answers financial questions from the [FinanceBench](https://huggingface.co/datasets/Liadmagen/financebench_QA) benchmark, plus an LLM-as-judge evaluation of the answers. Experiments are tracked with MLflow, and the pipeline can run in Docker with Chroma as a separate service.
 
-The original assignment is in `final_ir_project.ipynb`.
+## Background
+
+This project extends my capstone assignment for the MSCA course "Agentic AI for Finance" (Raiffeisen Bank International). The original submission was a multi-agent RAG system for financial question answering: three agents (fact extraction → calculation with a SQL tool → answer composition) built with the OpenAI Agents SDK on Azure OpenAI over a LlamaIndex vector index, evaluated on FinanceBench. It scored 35.3%.
+
+This extension keeps the multi-agent design and adds:
+- **Filing-level retrieval** over a Chroma index built from table-preserving text
+- **A router** that sends each question to a calculation pipeline or an Analyst agent
+- **Lookup tools** the agents can call: exact-phrase `find_in_filing` and semantic `search_filing`
+- **A safe calculator tool**, replacing the SQL tool
+- **The OpenAI API**, replacing Azure OpenAI
+- **MLflow tracking**, an offline retrieval evaluation, and a Docker setup
+
+The result is 85.3% accuracy on all 150 questions. The assignment brief is in `final_ir_project.ipynb`.
 
 ## Results
 
@@ -13,7 +25,7 @@ The original assignment is in `final_ir_project.ipynb`.
 
 Answers from `gpt-5-nano` / `gpt-5-mini`, graded by `gpt-5-mini`. The full run had 0 errors and 0 refusals; 8 calculation questions fell back to the Analyst.
 
-The original pipeline scored 35.33% on all 150 questions. Most of its wrong answers were refusals ("cannot be answered") caused by retrieval, so this version focuses on retrieval. Its code and results are in git history (commit `b451235`).
+The original assignment scored 35.33% on all 150 questions. Most of its wrong answers were refusals ("cannot be answered") caused by retrieval, so this extension focuses on retrieval. The original code and results are in this repository's first commit.
 
 ### Retrieval quality (measured offline with `05_evaluate_retrieval.py`)
 
