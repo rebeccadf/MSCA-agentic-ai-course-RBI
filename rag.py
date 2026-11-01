@@ -8,7 +8,6 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 import re
 import textwrap
-from collections import defaultdict
 from pathlib import Path
 
 from llama_index.core import Settings, StorageContext, VectorStoreIndex
@@ -21,7 +20,6 @@ CHROMA_DIR = PROJECT_DIR / "chroma_db"
 CHROMA_COLLECTION = "financebench"
 
 EMBED_MODEL = "BAAI/bge-small-en-v1.5"
-RERANK_MODEL = "BAAI/bge-reranker-base"
 CHUNK_SIZE = 512
 CHUNK_OVERLAP = 128
 
@@ -84,36 +82,23 @@ def build_index(documents):
 # RETRIEVAL
 # ------------------------------------------------------------------
 
-class HybridRetriever:
-    """Dense (+ optional BM25) retrieval restricted to one filing (or company), fused and reranked.
+class Retriever:
+    """Dense retrieval restricted to one filing (or company), plus exact-phrase lookup.
 
     filter_key: metadata field to restrict on, "doc_name" or "company"
-    hybrid:     add BM25 keyword retrieval (off by default: it lowered evidence
-                recall in 05_evaluate_retrieval.py)
-    rerank:     rerank with a cross-encoder (off by default: not yet measured)
     """
 
-    def __init__(self, filter_key: str = "doc_name",
-                 hybrid: bool = False, rerank: bool = False, candidates: int = 30):
+    def __init__(self, filter_key: str = "doc_name"):
         from llama_index.vector_stores.chroma import ChromaVectorStore
 
         use_embed_model()
         self.filter_key = filter_key
-        self.hybrid = hybrid
-        self.candidates = candidates
-        self.reranker = None
-        if rerank:
-            from sentence_transformers import CrossEncoder
-            self.reranker = CrossEncoder(RERANK_MODEL)
-
         self.collection = chroma_collection()
         self.index = VectorStoreIndex.from_vector_store(ChromaVectorStore(chroma_collection=self.collection))
-
         self._nodes = {}
-        self._bm25 = {}
 
     def nodes_for(self, value: str):
-        """All chunks of one filing/company, for BM25 and phrase search."""
+        """All chunks of one filing/company, for phrase search."""
         if value not in self._nodes:
             got = self.collection.get(where={self.filter_key: value}, include=["documents", "metadatas"])
             self._nodes[value] = [
@@ -122,47 +107,13 @@ class HybridRetriever:
             ]
         return self._nodes[value]
 
-    def _bm25_for(self, value: str):
-        from rank_bm25 import BM25Okapi
-
-        if value not in self._bm25:
-            self._bm25[value] = BM25Okapi([tokenize(n.get_content()) for n in self.nodes_for(value)])
-        return self._bm25[value]
-
     def search(self, query: str, value: str, top_k: int = 8):
-        # Fusion and reranking pick from a wider pool; never fewer than top_k
-        candidates = max(self.candidates, top_k) if (self.hybrid or self.reranker) else top_k
-
-        # 1. Dense retrieval, restricted to the filing (or company)
+        """The top_k chunks most similar to `query`, from the filing (or company) only."""
         retriever = self.index.as_retriever(
-            similarity_top_k=candidates,
+            similarity_top_k=top_k,
             filters=MetadataFilters(filters=[ExactMatchFilter(key=self.filter_key, value=value)]),
         )
-        dense = [n.node for n in retriever.retrieve(query)]
-        rankings = [dense]
-
-        # 2. Keyword retrieval, which handles exact line-item names better
-        if self.hybrid:
-            nodes = self.nodes_for(value)
-            if nodes:
-                scores = self._bm25_for(value).get_scores(tokenize(query))
-                ranked = sorted(range(len(nodes)), key=lambda i: scores[i], reverse=True)
-                rankings.append([nodes[i] for i in ranked[:candidates]])
-
-        # 3. Reciprocal rank fusion
-        fused = defaultdict(float)
-        by_id = {}
-        for ranking in rankings:
-            for rank, node in enumerate(ranking):
-                fused[node.node_id] += 1 / (60 + rank)
-                by_id[node.node_id] = node
-        pool = sorted(by_id.values(), key=lambda n: fused[n.node_id], reverse=True)[:candidates]
-
-        # 4. Cross-encoder rerank
-        if self.reranker is None or not pool:
-            return pool[:top_k]
-        scores = self.reranker.predict([(query, n.get_content()) for n in pool])
-        return [n for n, _ in sorted(zip(pool, scores), key=lambda x: x[1], reverse=True)[:top_k]]
+        return [n.node for n in retriever.retrieve(query)]
 
     def find_phrase(self, phrase: str, value: str, max_chunks: int = 3):
         """Chunks containing `phrase` word for word (like Ctrl+F), ignoring case and

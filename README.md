@@ -4,7 +4,7 @@ A multi-agent retrieval-augmented pipeline that answers financial questions from
 
 ## Background
 
-This project extends my capstone assignment for the MSCA course "Agentic AI for Finance" (Raiffeisen Bank International). The original submission was a multi-agent RAG system for financial question answering: three agents (fact extraction → calculation with a SQL tool → answer composition) built with the OpenAI Agents SDK on Azure OpenAI over a LlamaIndex vector index, evaluated on FinanceBench. It scored 35.3%.
+This project extends my assignment for the MSCA course "Agentic AI for Finance" (Raiffeisen Bank International). The original submission was a multi-agent RAG system for financial question answering: three agents (fact extraction → calculation with a SQL tool → answer composition) built with the OpenAI Agents SDK on Azure OpenAI over a LlamaIndex vector index, evaluated on FinanceBench. It scored 35.3%, mainly because of retrieval issues: most of its wrong answers were refusals ("cannot be answered").
 
 This extension keeps the multi-agent design and adds:
 - **Filing-level retrieval** over a Chroma index built from table-preserving text
@@ -21,7 +21,6 @@ The result is 85.3% accuracy on all 150 questions. The assignment brief is in `f
 | Run | Questions | Accuracy | Domain-relevant | Metrics-generated | Novel-generated |
 |-----|-----------|----------|-----------------|-------------------|-----------------|
 | `full` | all 150 (`--top-k 80`) | **85.3%** (128/150) | 86.0% | 90.0% | 80.0% |
-| `quick2` | 30 (fixed sample, `--top-k 40`) | 83.3% (25/30) | 70.0% | 87.5% | 91.7% |
 
 Answers from `gpt-5-nano` / `gpt-5-mini`, graded by `gpt-5-mini`. The full run had 0 errors and 0 refusals; 8 calculation questions fell back to the Analyst.
 
@@ -34,10 +33,9 @@ The hit rate is the share of the 150 questions where the retrieved chunks cover 
 | Setup | Context | Hit rate |
 |-------|---------|----------|
 | Filter by filing, 80 chunks (**current default**) | ~40k tokens | 89% |
-| Same + BM25 hybrid | ~40k tokens | 87% |
 | Filter by filing, 40 chunks | ~20k tokens | 83% |
 
-Filtering by filing, rather than by company as the original pipeline did, is the main improvement: on the original index it raised the hit rate from 69% to 93%. BM25 lowered recall, so it is off by default.
+Filtering by filing, rather than by company as the original pipeline did, is the main improvement: on the original index it raised the hit rate from 69% to 93%. Adding BM25 keyword search was also tested (87%), but it lowered the hit rate, so it is not used.
 
 Ranked search, by meaning or by keywords, often misses table rows: for PayPal, the chunk with `Total current liabilities | 45,101 | 43,029` never reached the top results. That is why the agents also have an exact-phrase lookup, `find_in_filing`.
 
@@ -47,7 +45,6 @@ Ranked search, by meaning or by keywords, often misses table rows: for PayPal, t
 FinanceBench filings ──► 01 build index ──► Chroma (chroma_db/ or Chroma server)
                                                   │
 FinanceBench QA ──► 02 run agents ──► vector retrieval in the question's filing
-                                      (optional: + BM25, cross-encoder rerank)
                                                   │
                                                Router
                                     ┌─────────────┴─────────────┐
@@ -76,12 +73,10 @@ Shared indexing and retrieval code is in `rag.py`; the LLM client is in `llm.py`
 
 ### Retrieval
 
-For each question, `rag.HybridRetriever`:
+For each question, `rag.Retriever`:
 
 1. **Filters to the filing the question is about** (`doc_name`, e.g. `3M_2018_10K`), rather than to all of a company's filings. This matches FinanceBench's single-document setting.
 2. Retrieves the 80 most similar chunks with the BGE embedding model.
-3. Optional `--hybrid`: also runs BM25 keyword retrieval and merges both lists with reciprocal rank fusion.
-4. Optional `--rerank`: reorders the pool with a cross-encoder (`BAAI/bge-reranker-base`, a one-off 1.1 GB download). It has not been measured yet; test it with `05_evaluate_retrieval.py --rerank --top-k 40`.
 
 ### Agents
 
@@ -116,10 +111,6 @@ pip install -r requirements.txt
 cp .env.example .env        # then add your OPENAI_API_KEY
 ```
 
-The first run downloads the embedding model from Hugging Face (about 130 MB). `--rerank` needs another 1.1 GB. Both are cached in `~/.cache/huggingface/` after the first download.
-
-Docker is optional. You only need it to run the project on another machine; locally, Chroma runs inside Python and stores its data in `chroma_db/`.
-
 ## Usage
 
 ### Everything in one command
@@ -137,8 +128,6 @@ Options passed to `run_pipeline.sh` go to `02_run_agents.py`:
 | `--limit` | all 150 | Fixed random sample of N questions |
 | `--top-k` | 80 | Chunks given to the agents up front |
 | `--search-top-k` | 6 | Chunks returned by each `search_filing` call |
-| `--hybrid` | off | Add BM25 keyword retrieval |
-| `--rerank` | off | Rerank with the cross-encoder |
 | `--concurrency` | 4 | Questions answered in parallel |
 
 Then open `04_display_accuracy.ipynb` to compare runs.
@@ -180,7 +169,6 @@ To compare retrieval setups without spending API credits:
 ```bash
 python 05_evaluate_retrieval.py                                         # current default
 python 05_evaluate_retrieval.py --top-k 40                              # fewer chunks
-python 05_evaluate_retrieval.py --top-k 40 --rerank                     # does the reranker help?
 python 05_evaluate_retrieval.py --filter company                        # whole company, as originally
 ```
 

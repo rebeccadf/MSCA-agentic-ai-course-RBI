@@ -25,7 +25,7 @@ from agents import (
 import llm
 import rag
 from llm import fast_model, strong_model
-from rag import HybridRetriever
+from rag import Retriever
 
 PROJECT_DIR = Path(__file__).parent
 MLFLOW_EXPERIMENT = "financebench-agents"
@@ -43,8 +43,6 @@ def parse_args():
     parser.add_argument("--concurrency", type=int, default=4)
     parser.add_argument("--top-k", type=int, default=80,
                         help="Chunks given to the agents up front (default: 80, about 40k tokens)")
-    parser.add_argument("--hybrid", action="store_true", help="Add BM25 keyword retrieval")
-    parser.add_argument("--rerank", action="store_true", help="Rerank with the cross-encoder")
     parser.add_argument("--search-top-k", type=int, default=6,
                         help="Chunks returned by each search_filing call (default: 6)")
     return parser.parse_args()
@@ -81,7 +79,7 @@ LIMIT_REACHED = (
 @dataclass
 class QuestionContext:
     doc_name: str
-    retriever: HybridRetriever
+    retriever: Retriever
     search_top_k: int
     lookups: int = 0
 
@@ -454,7 +452,7 @@ async def main():
     with results_file.open("w") as f:
         json.dump(kept, f, indent=2)
 
-    retriever = HybridRetriever(hybrid=args.hybrid, rerank=args.rerank)
+    retriever = Retriever()
 
     # One MLflow run per runs/<run> folder; 03 logs the accuracy into the same run
     rag.setup_mlflow(MLFLOW_EXPERIMENT)
@@ -470,10 +468,7 @@ async def main():
                 "vector_store": "chroma",
                 "top_k": args.top_k,
                 "search_top_k": args.search_top_k,
-                "hybrid": args.hybrid,
-                "rerank": args.rerank,
                 "embed_model": rag.EMBED_MODEL,
-                "rerank_model": rag.RERANK_MODEL if args.rerank else None,
                 "chunk_size": rag.CHUNK_SIZE,
                 "chunk_overlap": rag.CHUNK_OVERLAP,
                 "limit": args.limit or len(rows),
