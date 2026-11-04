@@ -12,6 +12,7 @@ openai-agents==0.24.0
 brotli>=1.2  # older versions break decoding of compressed OpenAI responses
 pydantic==2.14.2
 python-dotenv==1.2.4
+mcp==2.3.0
 
 # Tracking and analysis
 mlflow==3.17.2

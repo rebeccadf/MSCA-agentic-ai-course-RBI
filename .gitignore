@@ -8,3 +8,4 @@ mlruns/
 mlflow-docker/
 runs/*/mlflow_run_id.txt
 *.log
+.mcp.json

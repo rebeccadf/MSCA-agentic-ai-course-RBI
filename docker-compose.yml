@@ -40,6 +40,23 @@ services:
     entrypoint: ["python", "01_build_financebench_index.py"]
     profiles: ["setup"]
 
+  mcp:
+    build: .
+    env_file: .env
+    environment:
+      CHROMA_HOST: chroma
+      CHROMA_PORT: "8000"
+      HF_HOME: /cache/huggingface
+    depends_on:
+      - chroma
+    volumes:
+      - hf-cache:/cache/huggingface
+    # stdio MCP server, started by the client; register it with:
+    #   claude mcp add financebench -- docker compose -f "$PWD/docker-compose.yml" run --rm -T mcp
+    stdin_open: true
+    entrypoint: ["python", "mcp_server.py"]
+    profiles: ["mcp"]
+
 volumes:
   chroma-data:
   hf-cache:

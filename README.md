@@ -180,7 +180,66 @@ docker compose run --rm index                        # build the index into it (
 docker compose run --rm pipeline --run docker --limit 10
 ```
 
-The `pipeline` service reads `.env`, writes results to `./runs` and tracking to `./mlflow-docker`. View that tracking data with `mlflow ui --backend-store-uri sqlite:///mlflow-docker/mlflow.db`. Without Docker, Chroma runs embedded in `./chroma_db` instead, so no server is needed.
+The `pipeline` service reads `.env`, writes results to `./runs` and tracking to `./mlflow-docker`. View that tracking data with `mlflow ui --backend-store-uri sqlite:///mlflow-docker/mlflow.db`. Without Docker, Chroma runs embedded in `./chroma_db` instead, so no server is needed. The two indexes are separate: the Docker one lives in the `chroma-data` volume. The `mcp` service runs the MCP server in the same image (see below).
+
+### MCP server
+
+`mcp_server.py` gives an MCP client such as Claude Code or Claude Desktop access to the filings, so you can ask about them in a chat. It needs the Chroma index from step 1.
+
+| Tool | What it does | Cost |
+|------|--------------|------|
+| `list_filings(company)` | Lists the indexed filings and their `doc_name`, e.g. `3M_2018_10K`, optionally for one company | local |
+| `search_filing(doc_name, query)` | Searches one filing by meaning | local |
+| `find_in_filing(doc_name, phrase)` | Exact-phrase lookup, like Ctrl+F | local |
+| `answer_question(doc_name, question)` | Runs the full multi-agent pipeline | OpenAI API |
+
+With the lookup tools alone, the client's own model acts as the analyst. With `answer_question`, it asks this project's agents. Once registered, just ask in the chat, e.g. "What were 3M's capital expenditures in 2018?": the client picks the tools itself.
+
+The client starts the server when a chat session opens and stops it when the session ends, so there is nothing to keep running. Register it from the project folder, in one of two ways.
+
+**Locally**, with the Python that has `requirements.txt` installed and the index in `./chroma_db`:
+
+```bash
+claude mcp add financebench -- "$(which python)" "$PWD/mcp_server.py"
+```
+
+**In Docker**, with nothing installed but Docker. The index lives in the `chroma-data` volume, so it is built once (about 40 minutes on CPU) and kept until `docker compose down -v`:
+
+```bash
+cp .env.example .env                 # add your OPENAI_API_KEY
+docker compose up -d chroma
+docker compose run --rm index        # once
+claude mcp add financebench -- docker compose -f "$PWD/docker-compose.yml" run --rm -T mcp
+```
+
+Docker Desktop must be running when you chat; `docker compose run` starts the `chroma` service if needed. Keep `-T`: a TTY would corrupt the MCP messages on stdout.
+
+**Where it is available.** `claude mcp add` registers the server for Claude Code (terminal, VS Code and the desktop app's Code tab) in this project folder only; add `--scope user` to use it in every project. Claude Desktop's normal chat has its own config: add the server to `claude_desktop_config.json` (Settings → Developer → Edit Config), with absolute paths:
+
+```json
+{
+  "mcpServers": {
+    "financebench": {
+      "command": "/absolute/path/to/python",
+      "args": ["/absolute/path/to/mcp_server.py"]
+    }
+  }
+}
+```
+
+For the Docker server, use `"command": "docker"` and `"args": ["compose", "-f", "/absolute/path/to/docker-compose.yml", "run", "--rm", "-T", "mcp"]`. claude.ai in the browser can't use it, since it can't start a program on your machine.
+
+The first call takes a few seconds while the embedding model loads (and the container starts, with Docker). Your OpenAI key stays in your `.env`: it is in `.gitignore` and `.dockerignore`, so it is never committed or copied into the image.
+
+### Tests and CI
+
+```bash
+pip install pytest ruff
+pytest          # unit tests: no API key, index or network needed
+ruff check .
+```
+
+The tests cover filing cleaning, exact-phrase lookup, the safe calculator, the lookup budget, the router and fallback logic (with the agents replaced by fixed outputs), judge output parsing, the evidence-coverage metric and the MCP tools (through an in-process MCP client). GitHub Actions (`.github/workflows/ci.yml`) runs ruff, the tests and a Docker image build on every push to `main` and on every pull request.
 
 ## Notes
 
